@@ -1,0 +1,33 @@
+{
+  "extends": "@tsconfig/node22/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "#src/*": ["src/*"]
+    },
+    /* EXPERIMENT */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": "ES5",
+    /* Base */
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "forceConsistentCasingInFileNames": true,
+    /* More strictness */
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    /* Transpiling */
+    "outDir": "dist",
+    "rootDir": "src",
+    "sourceMap": true
+  },
+  "include": ["src/**/*"],
+  /* node_modules игнорируется по умолчанию */
+  "exclude": ["dist"]
+}

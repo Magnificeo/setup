@@ -1,0 +1,44 @@
+{
+  "name": "setup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts ",
+    "check": "tsc --watch --noEmit",
+    "lint": "eslint",
+    "format": "prettier --write .",
+    "prepare": "husky",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "@total-typescript/ts-reset": "^0.6.1",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/jest": "^29.5.14",
+    "eslint": "^9.16.0",
+    "globals": "^15.13.0",
+    "husky": "^9.1.7",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.11",
+    "prettier": "^3.4.2",
+    "ts-jest": "^29.2.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
+  },
+  "lint-staged": {
+    "*": "prettier --ignore-unknown --write"
+  },
+  "imports": {
+    "#src/*": {
+      "default": "./src/*"
+    }
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.2.2"
+  }
+}
